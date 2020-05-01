@@ -10,7 +10,7 @@
 	<description>Projeto MVC de Filmes para NAC I de Web Engineering.</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>5.1.5.RELEASE</spring.version>
+		<spring.version>5.2.6.RELEASE</spring.version>
 	</properties>
 	<dependencies>
 		<dependency>
