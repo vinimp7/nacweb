@@ -26,16 +26,16 @@ public class FilmeRepository {
 		filmes = new HashMap<Long, FilmeModel>();
 		
 		filmes.put(1L, new FilmeModel(1L, "Vingadores: Ultimato", "Joe Russo e Anthony Russo", 
-				"Acao/Ficcao Cientifica", "Walt Disney Pictures", 12, 2019, 182, new BigDecimal("2798000000.00", MathContext.UNLIMITED)));
+				"Acao/Ficcao Cientifica", "Walt Disney Pictures", 12, 182, 2019, new BigDecimal("2798000000.00", MathContext.UNLIMITED)));
 		
 		filmes.put(2L, new FilmeModel(2L, "Invocacao do Mal 2", "James Wan", 
-				"Terror/Horror", "Warner Bros", 18, 2016, 134, new BigDecimal("320382818.00", MathContext.UNLIMITED)));
+				"Terror/Horror", "Warner Bros", 18, 134, 2016, new BigDecimal("320382818.00", MathContext.UNLIMITED)));
 		
 		filmes.put(3L, new FilmeModel(3L, "Gente Grande", "Dennis Dugan", 
-				"Comedia/Familia", "Columbia Pictures", 0, 2010, 115, new BigDecimal("271400000.00", MathContext.UNLIMITED)));
+				"Comedia/Familia", "Columbia Pictures", 0, 115, 2010, new BigDecimal("271400000.00", MathContext.UNLIMITED)));
 		
 		filmes.put(4L, new FilmeModel(4L, "1917", "Sam Mendes", 
-				"Drama/Historico/Guerra", "Universal Studios", 16, 2019, 119, new BigDecimal("249700000.00", MathContext.UNLIMITED)));
+				"Drama/Historico/Guerra", "Universal Studios", 16, 119, 2019, new BigDecimal("249700000.00", MathContext.UNLIMITED)));
 	}
 	
 	public List<FilmeModel> findAll() {

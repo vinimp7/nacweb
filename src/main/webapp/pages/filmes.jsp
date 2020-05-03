@@ -46,7 +46,7 @@
 								<tr>
 									<td>${filme.titulo}</td>
 									<td>${filme.genero}</td>
-									<td>${filme.duracao}</td>
+									<td>${filme.ano_lancamento}</td>
 									<td>
 										<c:choose>
 											<c:when test="${filme.classificacao == 0}">Livre</c:when>
@@ -58,7 +58,7 @@
 										
 										<form:form action="${contextPath}/filmes/${filme.id}" method="delete">
 										
-											<a class="btn btn-success btn-xs" href="${contextPath}/filmes/form?page=filme-edit/${filme.id}">Detalhes</a>
+											<a class="btn btn-success btn-xs" href="${contextPath}/filmes/${filme.id}">Detalhes</a>
 											<a class="btn btn-warning btn-xs" href="${contextPath}/filmes/form?page=filme-edit&id=${filme.id}">Editar</a>
 											<input type="submit" value="Excluir" class="btn btn-danger btn-xs">
 										</form:form>

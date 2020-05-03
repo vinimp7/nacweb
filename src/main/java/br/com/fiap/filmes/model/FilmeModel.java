@@ -49,8 +49,8 @@ public class FilmeModel {
 		this.genero = genero;
 		this.distribuicao = distribuicao;
 		this.classificacao = classificacao;
+		this.duracao = duracao;		
 		this.ano_lancamento = ano_lancamento;
-		this.duracao = duracao;
 		this.bilheteria = bilheteria;
 	}
 	
