@@ -24,7 +24,7 @@ public class FilmeModel {
 	@NotEmpty(message = "Informe a empresa distribuidora do filme.")
 	private String distribuicao;
 	
-	@Size(min = 0, max = 18, message = "Informe a classificacao do filme (0 para classificacao Livre) ate 18 anos.")
+	@Size(min = 1, max = 18, message = "Informe a classificacao do filme (0 para classificacao Livre) ate 18 anos.")
 	private int classificacao;
 	
 	@Min(value = 1985, message = "Nao e possivel informar um ano tao baixo. (Minimo 1985)")

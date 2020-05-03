@@ -1,6 +1,7 @@
 package br.com.fiap.filmes.repository;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
@@ -25,16 +26,16 @@ public class FilmeRepository {
 		filmes = new HashMap<Long, FilmeModel>();
 		
 		filmes.put(1L, new FilmeModel(1L, "Vingadores: Ultimato", "Joe Russo e Anthony Russo", 
-				"Acao/Ficcao Cientifica", "Walt Disney Pictures", 12, 2019, 182, new BigDecimal("2.798.000.000,00")));
+				"Acao/Ficcao Cientifica", "Walt Disney Pictures", 12, 2019, 182, new BigDecimal("2798000000.00", MathContext.UNLIMITED)));
 		
 		filmes.put(2L, new FilmeModel(2L, "Invocacao do Mal 2", "James Wan", 
-				"Terror/Horror", "Warner Bros", 18, 2016, 134, new BigDecimal("320.382.818,00")));
+				"Terror/Horror", "Warner Bros", 18, 2016, 134, new BigDecimal("320382818.00", MathContext.UNLIMITED)));
 		
 		filmes.put(3L, new FilmeModel(3L, "Gente Grande", "Dennis Dugan", 
-				"Comedia/Familia", "Columbia Pictures", 0, 2010, 115, new BigDecimal("271.400.000,00")));
+				"Comedia/Familia", "Columbia Pictures", 0, 2010, 115, new BigDecimal("271400000.00", MathContext.UNLIMITED)));
 		
 		filmes.put(4L, new FilmeModel(4L, "1917", "Sam Mendes", 
-				"Drama/Historico/Guerra", "Universal Studios", 16, 2019, 119, new BigDecimal("249.700.000,00")));
+				"Drama/Historico/Guerra", "Universal Studios", 16, 2019, 119, new BigDecimal("249700000.00", MathContext.UNLIMITED)));
 	}
 	
 	public List<FilmeModel> findAll() {

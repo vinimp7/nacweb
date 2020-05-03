@@ -19,6 +19,97 @@
 	</head>
 	<body>
 	
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well">
+					
+					<h2>Novo Filme</h2>
+					
+					<form action="${contextPath}/filmes" method="post">
+						<spring:hasBindErrors name="filmeModel">
+							<div class="alert alert-danger" role="alert">
+								<form:errors path="*" class="has-error" />
+							</div>
+						</spring:hasBindErrors>
+
+						<div class="form-group">
+							<label class="control-label" for="titulo">Titulo:</label>
+							<input type="text" name="titulo" id="titulo" value="" class="form-control" maxlength="50" size="50" />
+							<font color="red">
+								
+							</font><br/>
+                        </div>
+                        <div class="form-group">
+							<label class="control-label" for="diretor">Diretor:</label>
+							<input id="diretor" name="diretor" value="" class="form-control" maxlength="50" size="50" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="genero">Genero:</label>
+							<input id="genero" name="genero" value="" class="form-control" maxlength="50" size="50" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="distribuicao">Distribuicao:</label>
+							<input type="text" id="distribuicao"  name="distribuicao" class="form-control" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="classificacao">Classificacao:</label>
+							<input type="number" id="classificacao" name="classificacao" value="" class="form-control" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="ano_lancamento">Ano de Lancamento:</label>
+							<input type="number" id="ano_lancamento" name="ano_lancamento" class="form-control" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="duracao">Duracao (Minutos):</label>
+							<input type="number" id="duracao" name="duracao" class="form-control" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="bilheteria">Bilheteria (US$):</label>
+							<input type="number" id="bilheteria"  name="bilheteria" class="form-control" />
+							<font color="red">
+								
+							</font><br/>
+						</div>
+						<hr>
+						
+						<a class="btn btn-default btn-lg" href="${contextPath}/filmes">Cancelar</a>
+						<button type="submit" class="btn btn-primary btn-lg">Gravar</button>
+                            
+                        <br>
+                        <br>
+					</form>
+					
+					
+                </div>
+            </div>
+        </div>
+    </div>
+	
 		<script src="${js}/jquery.js"></script>
 	    <script src="${js}/bootstrap.min.js"></script>
 	</body>

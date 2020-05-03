@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.fiap.filmes.model.FilmeModel;
@@ -43,9 +44,16 @@ public class FilmeController {
 		return "filme-detalhe";
 	}
 	
-	@GetMapping("/add")
-	public String form(@ModelAttribute("filmeModel") FilmeModel filme) {
-		return "filme-add";
+	@GetMapping("/form")
+	public String form(@RequestParam(required = false) String page,
+			@RequestParam(required = false) Long id,
+			Model model) {
+		
+		if("filme-edit".equals(page)) {
+			model.addAttribute("filme", filmeRepository.findById(id));
+		}
+		
+		return page;
 	}
 	
 	@PostMapping
