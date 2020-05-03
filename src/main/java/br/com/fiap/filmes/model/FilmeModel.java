@@ -6,7 +6,7 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
 
 public class FilmeModel {
 	
@@ -24,20 +24,24 @@ public class FilmeModel {
 	@NotEmpty(message = "Informe a empresa distribuidora do filme.")
 	private String distribuicao;
 	
-	@Size(min = 1, max = 18, message = "Informe a classificacao do filme (0 para classificacao Livre) ate 18 anos.")
-	private int classificacao;
+	@Min(value = 0)
+	@Max(value = 18)
+	@NotNull(message= "Informe a classificacao do filme")
+	private Integer classificacao;
 	
 	@Min(value = 1985, message = "Nao e possivel informar um ano tao baixo. (Minimo 1985)")
 	@Max(value = 2020, message = "Nao e possivel informar um ano tao alto. (Maximo 2020)")
-	private int ano_lancamento;
+	@NotNull(message = "Informe o ano de lancamento do filme")
+	private Integer ano_lancamento;
 	
-	@Min(value = 1, message = "Informe a duracao do filme em minutos. Um filme nao pode ter menos de um (1) minuto de duracao.")
-	private int duracao;
+	@Min(value = 1, message = "Um filme nao pode ter menos de um (1) minuto de duracao.")
+	@NotNull(message = "Informe a duracao do filme em minutos.")
+	private Integer duracao;
 	
 	@DecimalMin(value = "0.01", message = "A bilheteria nao pode conter 0 ou valor negativo.")
 	private BigDecimal bilheteria;
 	
-	public FilmeModel(Long id, String titulo, String diretor, String genero, String distribuicao, int classificacao, int duracao, int ano_lancamento, BigDecimal bilheteria) {
+	public FilmeModel(Long id, String titulo, String diretor, String genero, String distribuicao, Integer classificacao, Integer duracao, Integer ano_lancamento, BigDecimal bilheteria) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -82,11 +86,11 @@ public class FilmeModel {
 		this.genero = genero;
 	}
 	
-	public int getDuracao() {
+	public Integer getDuracao() {
 		return duracao;
 	}
 	
-	public void setDuracao(int duracao) {
+	public void setDuracao(Integer duracao) {
 		this.duracao = duracao;
 	}
 	
@@ -98,19 +102,19 @@ public class FilmeModel {
 		this.distribuicao = distribuicao;
 	}
 	
-	public int getClassificacao() {
+	public Integer getClassificacao() {
 		return classificacao;
 	}
 	
-	public void setClassificacao(int classificacao) {
+	public void setClassificacao(Integer classificacao) {
 		this.classificacao = classificacao;
 	}
 	
-	public int getAno_lancamento() {
+	public Integer getAno_lancamento() {
 		return ano_lancamento;
 	}
 	
-	public void setAno_lancamento(int ano_lancamento) {
+	public void setAno_lancamento(Integer ano_lancamento) {
 		this.ano_lancamento = ano_lancamento;
 	}
 	

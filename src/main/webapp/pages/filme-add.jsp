@@ -26,7 +26,7 @@
 					
 					<h2>Novo Filme</h2>
 					
-					<form action="${contextPath}/filmes" method="post">
+					<form:form modelAttribute="filmeModel" action="${contextPath}/filmes" method="post">
 						<spring:hasBindErrors name="filmeModel">
 							<div class="alert alert-danger" role="alert">
 								<form:errors path="*" class="has-error" />
@@ -35,64 +35,64 @@
 
 						<div class="form-group">
 							<label class="control-label" for="titulo">Titulo:</label>
-							<input type="text" name="titulo" id="titulo" value="" class="form-control" maxlength="50" size="50" />
+							<form:input type="text" path="titulo" name="titulo" id="titulo" value="" class="form-control" maxlength="50" size="50" />
 							<font color="red">
-								
+								<form:errors path="titulo" />
 							</font><br/>
                         </div>
                         <div class="form-group">
 							<label class="control-label" for="diretor">Diretor:</label>
-							<input id="diretor" name="diretor" value="" class="form-control" maxlength="50" size="50" />
+							<form:input id="diretor" path="diretor" name="diretor" value="" class="form-control" maxlength="50" size="50" />
 							<font color="red">
-								
+								<form:errors path="diretor" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="genero">Genero:</label>
-							<input id="genero" name="genero" value="" class="form-control" maxlength="50" size="50" />
+							<form:input id="genero" path="genero" name="genero" value="" class="form-control" maxlength="50" size="50" />
 							<font color="red">
-								
+								<form:errors path="genero" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="distribuicao">Distribuicao:</label>
-							<input type="text" id="distribuicao"  name="distribuicao" class="form-control" />
+							<form:input type="text" path="distribuicao" id="distribuicao"  name="distribuicao" class="form-control" />
 							<font color="red">
-								
+								<form:errors path="distribuicao" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="classificacao">Classificacao:</label>
-							<input type="number" id="classificacao" name="classificacao" value="" class="form-control" />
+							<form:input type="number" path="classificacao" id="classificacao" name="classificacao" value="" class="form-control" />
 							<font color="red">
-								
+								<form:errors path="classificacao" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="ano_lancamento">Ano de Lancamento:</label>
-							<input type="number" id="ano_lancamento" name="ano_lancamento" class="form-control" />
+							<form:input type="text" path="ano_lancamento" name="ano_lancamento" value="" id="ano_lancamento" class="form-control" />
 							<font color="red">
-								
+								<form:errors path="ano_lancamento" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="duracao">Duracao (Minutos):</label>
-							<input type="number" id="duracao" name="duracao" class="form-control" />
+							<form:input type="text" path="duracao" name="duracao" id="duracao" value="" class="form-control" />
 							<font color="red">
-								
+								<form:errors path="duracao" />
 							</font><br/>
 						</div>
 						
 						<div class="form-group">
 							<label class="control-label" for="bilheteria">Bilheteria (US$):</label>
-							<input type="number" id="bilheteria"  name="bilheteria" class="form-control" />
+							<form:input type="text" path="bilheteria" id="bilheteria" value="" name="bilheteria" class="form-control" />
 							<font color="red">
-								
+								<form:errors path="bilheteria" />
 							</font><br/>
 						</div>
 						<hr>
@@ -102,7 +102,7 @@
                             
                         <br>
                         <br>
-					</form>
+					</form:form>
 					
 					
                 </div>

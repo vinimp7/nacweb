@@ -47,6 +47,7 @@ public class FilmeController {
 	@GetMapping("/form")
 	public String form(@RequestParam(required = false) String page,
 			@RequestParam(required = false) Long id,
+			@ModelAttribute("filmeModel") FilmeModel filmeModel,
 			Model model) {
 		
 		if("filme-edit".equals(page)) {
